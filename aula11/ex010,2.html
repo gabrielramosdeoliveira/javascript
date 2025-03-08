@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aeroporto</title>
+</head>
+<body>
+    <h1>É viagem de retorno ou ida?</h1>
+    <p>Informe seu país: <input type="text" name="pais" id="pais">
+    <input type="button" value="verificar" onclick=calcular()></p>
+    <div id="res">
+
+    </div>
+    <script>
+        function calcular() {
+        var país = window.document.querySelector('input#pais')
+        var res = window.document.querySelector('div#res')
+        var texto = (país.value)
+        res.innerHTML = `Você está vivendo em ${texto}`
+        if (texto =='Brasil') {
+            res.innerHTML += `<p>Você é Brasileiro<p>`
+        } 
+        else {
+            res.innerHTML += `<p>Você é Estrangeiro!<p>`
+        }
+    }
+
+    </script>
+
+</body>
+</html>
